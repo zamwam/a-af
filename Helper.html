@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="helper.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Free online insurance premium quote calculator and Massachusetts vehicle registration fee estimator. Calculate monthly payments, down payments, taxes, title fees, and plates instantly."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="insurance calculator, premium quote calculator, car insurance quote, MAIP insurance, Massachusetts registration fees, vehicle tax calculator, monthly insurance payment"
+    />
+
+    <title>
+      Free Insurance Premium & Registration Calculator | A-Affordable Insurance
+      Massachusetts
+    </title>
+
+    <meta
+      property="og:title"
+      content="Free Insurance Premium & Registration Calculator | A-Affordable Insurance"
+    />
+    <meta
+      property="og:description"
+      content="Instant premium quotes and vehicle registration fee calculator for Massachusetts drivers."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/insurance-calculator"
+    />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <img
+      src="favicon.ico"
+      alt="A-Affordable Insurance Logo"
+      class="logo" style="width: 15%; height: 15%; position: static; display: block;">
+
+    <div class="container">
+      <h1>A-Affordable Insurance Calculator</h1>
+      <h2>Premium Quote & Vehicle Registration Tools</h2>
+
+      <div class="section">
+        <h2>Premium Quote Calculator</h2>
+
+        <label for="customer">Customer Name</label>
+        <input id="customer" placeholder="Customer Name" type="text" />
+
+        <label for="premium">Premium Amount ($)</label>
+        <input id="premium" type="number" placeholder="Annual Premium Amount" />
+
+        <label for="down">Downpayment %</label>
+        <input id="down" type="number" placeholder="Downpayment Percentage" />
+
+        <label for="company">Insurance Company</label>
+        <select id="company"></select>
+
+        <label for="term">Number of Monthly Payments</label>
+        <select id="term">
+          <option value="">Select Months</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+
+        <button class="primary" onclick="calculatePremium()">
+          Calculate Premium
+        </button>
+        <button class="secondary" onclick="resetPremium()">Reset</button>
+
+        <div id="premiumResult" class="result"></div>
+        <button class="primary full" onclick="generatePremiumPDF()">
+          Generate PDF Quote
+        </button>
+      </div>
+
+      <div class="section">
+        <h2>Registration Quote Calculator</h2>
+
+        <div class="grid">
+          <div style="width: 95%" class="full">
+            <label for="name">Customer Name</label>
+            <input id="name" placeholder="Customer Name" type="text" />
+          </div>
+
+          <div class="full">
+            <label for="sale">Sale Type</label>
+            <select id="sale" onchange="handleSaleChange()">
+              <option value="Dealer Sale">Dealer Sale</option>
+              <option value="Private Sale">Private Sale</option>
+              <option value="Gift">Gift</option>
+            </select>
+          </div>
+
+          <div style="width: 95%">
+            <label for="price">Sale Price ($)</label>
+            <input id="price" type="number" placeholder="Sale Price" />
+          </div>
+
+          <div style="width: 95%">
+            <label for="value">Book Value ($)</label>
+            <input id="value" type="number" placeholder="Book Value" />
+          </div>
+
+          <div class="full">
+            <label for="plate">Plate Type</label>
+            <select id="plate"></select>
+          </div>
+
+          <div class="full">
+            <label for="register">Register With Agency?</label>
+            <select id="register" onchange="handleRegisterChange()">
+              <option value="Register With Agency">Register With Agency</option>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label for="policy">Policy Type</label>
+            <select id="policy">
+              <option value="">Select Policy Type</option>
+              <option value="MAIP">MAIP</option>
+              <option value="Direct">Direct</option>
+            </select>
+          </div>
+
+          <button onclick="calculateRegistration()" class="primary full">
+            Calculate Registration
+          </button>
+          <button onclick="generateRegistrationPDF()" class="primary full">
+            Generate PDF Quote
+          </button>
+        </div>
+
+        <div id="regResult" class="result"></div>
+      </div>
+    <footer class="footer">
+            <p>© 2026 A-Affordable Insurance</p>
+    </footer>
+    </div>
+</footer>
+    </div>
+            <br><br>        <br><br>        <br><br>        <br><br>        <br><br>        <br><br>
+         <div id="vindec" style="font-family: Arial; font-weight: bold; font-size: 16px;"> <form target="_blank" name="decode" id="decode" action="https://www.decodethis.com/vin_decoded.aspx"> <span style="color: #b43616; font-size: 26px;">Decode Any Car VIN Here</span><br /> <input id="vin" type="text" value="" name="vin" size="13" style="border: solid 1px gray; background-color: #eee;"/> <input id="vindeco" style="background-color: #1e3a8a;" type="submit" value="Go!" /><br /> <span  style="font-size: 10px; color: #9e2f13;"> <a href="https://www.decodethis.com/"  title="Free VIN Decoder by Decode This!">Free VIN Decoder by Decode This!</a></span> </form></div>              
+              <br><br>        <br><br>        <br><br>        <br><br>
+
+    <script src="helper.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "A-Affordable Insurance Calculator",
+        "description": "Free premium quote calculator and Massachusetts vehicle registration fee estimator.",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </body>
+</html>
