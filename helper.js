@@ -102,7 +102,7 @@ function calculatePremium() {
   const resultHTML =
     `Premium: $${premium.toFixed(2)}\n` +
     `Downpayment: $${downPay.toFixed(2)}\n` +
-    `Amount Financed: $${amountFinanced.toFixed(2)}\n` +
+    `Amount Remaining: $${amountFinanced.toFixed(2)}\n` +
     (company === "MAIP FINANCED"
       ? `Interest: $${interest.toFixed(2)}\n` +
         `Service Charge: $${serviceCharge.toFixed(2)}\n` +
