@@ -209,7 +209,7 @@ function generatePremiumPDF() {
   const rows = [
     ["Premium", formatCurrency(lastPremium.premium)],
     ["Downpayment", formatCurrency(lastPremium.downPay)],
-    ["Amount Financed", formatCurrency(lastPremium.amountFinanced)],
+    ["Amount Remaining", formatCurrency(lastPremium.amountFinanced)],
   ];
 
   if (lastPremium.company === "MAIP FINANCED") {
