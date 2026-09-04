@@ -205,6 +205,12 @@ function generatePremiumPDF() {
   doc.setFontSize(12);
   doc.setFont("helvetica", "bold");
   doc.text("Quote Summary", 16, 92);
+  doc.text(
+    "Please note that the down payment does not include the $100 agency fee. The representative is responsible for ensuring that the $100 agency fee is applied separately to the policy.",
+    15,
+    180,
+    { maxWidth: 180 }
+  );
 
   const rows = [
     ["Premium", formatCurrency(lastPremium.premium)],
